@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darie's Webb - Premium Men's Footwear</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Paystack Script -->
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+    <!-- html2canvas for screenshots -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="shoe-polish-animation">
+                <div class="shoe">
+                    <div class="shoe-body"></div>
+                    <div class="shoe-lace"></div>
+                    <div class="shoe-sole"></div>
+                </div>
+                <div class="polish-brush">
+                    <div class="brush-handle"></div>
+                    <div class="brush-bristles"></div>
+                </div>
+            </div>
+            <div class="loading-text">
+                <span>D</span>
+                <span>A</span>
+                <span>R</span>
+                <span>I</span>
+                <span>E</span>
+                <span>'</span>
+                <span>S</span>
+                <span> </span>
+                <span>W</span>
+                <span>E</span>
+                <span>B</span>
+                <span>B</span>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <h1>Darie's Webb</h1>
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#collection">Shop</a>
+                    <a href="#new-arrivals" class="new-arrivals-link">New Arrivals</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="#search" class="nav-icon"><i class="fas fa-search"></i></a>
+                    <a href="#account" class="nav-icon"><i class="fas fa-user"></i></a>
+                    <a href="#orders" class="nav-icon orders-icon" id="orders-btn">
+                        <i class="fas fa-history"></i>
+                    </a>
+                    <a href="#cart" class="nav-icon cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button id="dark-mode-toggle" class="nav-icon dark-mode-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="signout-btn" class="signout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Sign Out</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Step Into Style</h1>
+            <p>Discover our premium collection of men's footwear</p>
+            <a href="#collection" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <a href="#collection" class="category-card" data-category="sneakers">
+                <img src="Tiles images/ceramic-vs-vitrified-tiles-for-your-flooring-thumb-og.jpg" alt="Sneakers">
+                <h3>TILES</h3>
+                <div class="category-overlay">
+                    <span>View Collection</span>
+                </div>
+            </a>
+            <a href="#collection" class="category-card" data-category="formal">
+                <img src="T&G images/157194634-56a49f463df78cf772834e9f.jpg" alt="Formal Shoes">
+                <h3>TONGUES AND GROOVE</h3>
+                <div class="category-overlay">
+                    <span>View Collection</span>
+                </div>
+            </a>
+            <a href="#collection" class="category-card" data-category="boots">
+                <img src="wc images/newsCover_2023_8_9_1691566315571-xmkv9.jpg" alt="Boots">
+                <h3>WATER CLOSET</h3>
+                <div class="category-overlay">
+                    <span>View Collection</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="collection">
+        <h2>Featured Products</h2>
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">All Products</button>
+            <button class="filter-btn" data-category="tiles">Tiles</button>
+            <button class="filter-btn" data-category="t&g">T&G</button>
+            <button class="filter-btn" data-category="wc">WC</button>
+        </div>
+        <div class="product-grid" id="product-container">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p class="subtitle">Crafting Excellence in Every Step</p>
+                <div class="about-description">
+                    <p>At Darie's Webb, we believe that quality footwear is more than just a fashion statement –
+                         it's a reflection of your personality and a testament to your style. Founded with a passion 
+                         for exceptional craftsmanship and timeless design, we've been creating premium men's footwear 
+                         that combines comfort, durability, and sophistication.</p>
+                    <p>Our journey began with a simple mission: to provide discerning gentlemen with footwear that not 
+                        only looks exceptional but feels extraordinary. Each pair in our collection is meticulously crafted 
+                        using the finest materials and traditional techniques, ensuring that every step you take is one of confidence and comfort.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Quality</h3>
+                        <p>Handcrafted with the finest materials</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-heart"></i>
+                        <h3>Customer First</h3>
+                        <p>Dedicated to your satisfaction</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Sustainable</h3>
+                        <p>Eco-friendly manufacturing</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="wear-1.jpg" alt="Darie's Webb Craftsmanship">
+                <div class="image-overlay">
+                    <div class="overlay-content">
+                        <h3>Experience Excellence</h3>
+                        <p>Discover our collection</p>
+                        <a href="#collection" class="explore-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="new-arrivals" id="new-arrivals">
+        <div class="section-header">
+            <h2>New Arrivals</h2>
+            <p>Discover our latest collection of premium footwear</p>
+        </div>
+        <div class="new-arrivals-grid" id="new-arrivals-container">
+            <!-- New arrivals will be dynamically loaded here -->
+        </div>
+        <div class="view-all-container">
+            <a href="#collection" class="view-all-btn" id="view-all-btn">View All Products</a>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for exclusive offers and updates</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" id="subscribe-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p class="subtitle">We'd love to hear from you</p>
+                <div class="info-items">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-text">
+                            <h3>Visit Us</h3>
+                            <p>123 Fashion Street</p>
+                            <p>Accra, Ghana</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="info-text">
+                            <h3>Call Us</h3>
+                            <p>+233 20 123 4567</p>
+                            <p>+233 50 987 6543</p>
+                        </div>
+                    </div>
+                    <div class="info-item" id="email-info">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-text">
+                            <h3>Email Us</h3>
+                            <p>info@ayewswear.com</p>
+                            <p>support@ayewswear.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item" id="working-hours">
+                        <i class="fas fa-clock"></i>
+                        <div class="info-text">
+                            <h3>Working Hours</h3>
+                            <p>Monday - Friday: 9AM - 6PM</p>
+                            <p>Saturday: 10AM - 4PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="send-message-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.973444!2d-0.1869644!3d5.6037168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sus!4v1647881234567!5m2!1sen!2sus" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Premium men's footwear for every occasion. Quality, comfort, and style in every step.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                    <li><a href="#new-arrivals">New Arrivals</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@ayewswear.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Darie's Webb. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically loaded here -->
+        </div>
+        <div class="cart-total">
+            <p>Total: ₵<span id="cart-total-amount">0.00</span></p>
+            <button class="checkout-button">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Floating Cart for Mobile -->
+    <div class="floating-cart" id="floating-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="floating-cart-count">0</span>
+    </div>
+
+    <!-- Order History Modal -->
+    <div class="order-history-modal" id="order-history-modal">
+        <div class="order-history-content">
+            <div class="order-history-header">
+                <h2>Order History</h2>
+                <button class="close-order-history"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="order-history-body" id="order-history-list">
+                <!-- Orders will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <!-- Payment Sounds -->
+    <audio id="payment-processing-sound" preload="auto">
+        <source src="sounds/Processing please wait.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="payment-success-sound" preload="auto">
+        <source src="sounds/Payment Successful.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
