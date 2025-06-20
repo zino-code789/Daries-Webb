@@ -4,7 +4,7 @@ const products = [
         id: 1,
         name: "Tiles 1",
         price: 89.99,
-        image: "Tiles images/ceramic-vs-vitrified-tiles-for-your-flooring-thumb-og.jpg",
+        image: "ceramic-vs-vitrified-tiles-for-your-flooring-thumb-og.jpg",
         category: "tiles",
         description: "Premium Floor Tiles with comfortable cushioning",
         isNew: true
@@ -13,7 +13,7 @@ const products = [
         id: 2,
         name: "T&G 2",
         price: 129.99,
-        image: "T&G images/157194634-56a49f463df78cf772834e9f.jpg",
+        image: "157194634-56a49f463df78cf772834e9f.jpg",
         category: "t&g",
         description: "Elegant T&G Tiles perfect for formal occasions",
         isNew: true
@@ -22,7 +22,7 @@ const products = [
         id: 3,
         name: "WC 2",
         price: 79.99,
-        image: "wc images/newsCover_2023_8_9_1691566315571-xmkv9.jpg",
+        image: "newsCover_2023_8_9_1691566315571-xmkv9.jpg",
         category: "wc",
         description: "Stylish Water Closet Tiles for a casual yet sophisticated look",
         isNew: false
@@ -31,7 +31,7 @@ const products = [
         id: 4,
         name: "Tiles 3",
         price: 59.99,
-        image: "Tiles images/ceramic-vs-vitrified-tiles-for-your-flooring-thumb-og.jpg",
+        image: "ceramic-vs-vitrified-tiles-for-your-flooring-thumb-og.jpg",
         category: "tiles",
         description: "Lightweight Floor Tiles for everyday wear",
         isNew: true
@@ -40,7 +40,7 @@ const products = [
         id: 5,
         name: "T&G 1",
         price: 149.99,
-        image: "T&G images/157194634-56a49f463df78cf772834e9f.jpg",
+        image: "157194634-56a49f463df78cf772834e9f.jpg",
         category: "t&g",
         description: "Premium T&G Tiles with modern design",
         isNew: false
@@ -49,7 +49,7 @@ const products = [
         id: 6,
         name: "WC 1",
         price: 49.99,
-        image: "wear-6.jpg",
+        image: "zen_wc_web_products_upload.webp",
         category: "wc",
         description: "Comfortable Water Closet Tiles perfect for summer days",
         isNew: true

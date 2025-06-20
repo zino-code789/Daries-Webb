@@ -394,7 +394,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('wear-3.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('product-jpeg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -4065,7 +4065,7 @@ html {
 
 /* Dark Mode Background Adjustments */
 [data-theme="dark"] .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('wear-1.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('ceramic-vs-vitrified-tiles-for-your-flooring-thumb-og.jpg');
     filter: brightness(0.8) contrast(1.1);
 }
 
